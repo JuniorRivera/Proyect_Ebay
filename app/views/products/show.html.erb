@@ -1,0 +1,22 @@
+<p>
+  <strong>Categoria:</strong>
+  <%= @products.categoria %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @products.nombre %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @products.descripción %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @products.precio %>
+</p>
+
+<%= link_to 'Back', :action => :index %>
+ <%= link_to 'Edit', :action => :edit, :id => @products.id %>

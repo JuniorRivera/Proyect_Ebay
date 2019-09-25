@@ -1,0 +1,23 @@
+<h1> lista de productos</h1>
+<%= link_to 'Ebay', :action => :new %>
+<table>
+  <tr>
+    <th>Categoria</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Precio</th>
+  </tr>
+
+  <% @products.each do |products| %>
+    <tr>
+      <td><%= products.categoria %></td>
+      <td><%= products.nombre %></td>
+      <td><%= products.descripción %></td>
+      <td><%= products.precio %></td>
+
+      <td><%= link_to 'Show', :action => :show, :id => products.id %></td>
+    <td><%= link_to 'Edit', :action => :edit, :id => products.id %></td>
+    
+    </tr>
+  <% end %>
+</table>
